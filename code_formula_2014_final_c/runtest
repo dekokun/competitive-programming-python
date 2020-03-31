@@ -2,6 +2,11 @@
 
 cd "$(dirname "$0")" || exi
 source ../runtest_func.sh
-cargo test
 
-t "" ""
+t "@codeformula why is this contest so easy" "codeformula"
+t "myon @@c @a @aba@a @@bb bbb @@@@@ @a test  @ space  aaa test @a@a  test@takoyaki" "a
+aba
+bb
+c
+takoyaki"
+t "no atmark"
