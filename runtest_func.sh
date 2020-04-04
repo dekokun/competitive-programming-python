@@ -1,4 +1,3 @@
-export RUST_BACKTRACE=1
 # compile check
 RED='\033[0;31m'
 GREEN='\033[0;32m'
