@@ -3,4 +3,9 @@
 cd "$(dirname "$0")" || exi
 source ../runtest_func.sh
 
-t "" ""
+t "4
+ABXY" 2
+t "13
+ABABABABXBXBX" 7
+t "8
+AABBAABB" 4
