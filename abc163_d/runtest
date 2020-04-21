@@ -3,4 +3,6 @@
 cd "$(dirname "$0")" || exi
 source ../runtest_func.sh
 
-t "" ""
+t "3 2" 10
+t "200000 200001" 1
+t "141421 35623" 220280457
