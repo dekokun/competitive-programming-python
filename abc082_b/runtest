@@ -3,4 +3,13 @@
 cd "$(dirname "$0")" || exi
 source ../runtest_func.sh
 
-t "" ""
+t "yx
+axy" Yes
+t "ratcode
+atlas" Yes
+t "cd
+abc" No
+t "w
+ww" Yes
+t "zzz
+zzz" No
