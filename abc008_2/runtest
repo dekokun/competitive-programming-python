@@ -3,4 +3,20 @@
 cd "$(dirname "$0")" || exi
 source ../runtest_func.sh
 
-t "" ""
+t "4
+taro
+jiro
+taro
+saburo" taro
+t "1
+takahashikun" takahashikun
+t "9
+a
+b
+c
+c
+b
+c
+b
+d
+e" b
