@@ -13,15 +13,15 @@ def output(v):
 
 
 def get_hit_point():
-    for x in [10**9 // 2, -(10**9 // 2), 0]:
-        for y in [10**9 // 2, -(10**9 // 2), 0]:
+    for x in [(10**9) // 2, -(10**9 // 2), 0]:
+        for y in [(10**9) // 2, -(10**9 // 2), 0]:
             throw = "{} {}".format(x, y)
             output(throw)
             out = input().strip()
             if out == CENTER:
                 return None
             elif out == WRONG:
-                exit(1)
+                exit(0)
             elif out == HIT:
                 return (x, y)
             elif out == MISS:
@@ -123,7 +123,8 @@ def solve():
     elif out == WRONG:
         exit(0)
     elif out == HIT:
-        exit(1)
+        # if exit(1) get RE. exit(0) get WA...
+        exit(0)
     elif out == MISS:
         exit(1)
 
