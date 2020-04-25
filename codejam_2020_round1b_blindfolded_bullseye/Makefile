@@ -10,5 +10,4 @@ $(TESTINT_TOOL_NAME):
 
 .PHONY: test
 test: interactive_runner.py $(TESTINT_TOOL_NAME) main.py
-	pwd
 	python3 interactive_runner.py python3 $(TESTINT_TOOL_NAME) $(TEST_NUM) -- python3 main.py
