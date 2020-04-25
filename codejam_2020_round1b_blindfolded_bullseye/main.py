@@ -35,9 +35,10 @@ def solve():
         # center
         return
     else:
-        _, check_line = point
+        x, y = point
+    check_line = y
     # 右を取得
-    left = 0
+    left = x
     right = 10**9 + 1
     while right - left > 1:
         mid = left + (right - left) // 2
@@ -57,7 +58,7 @@ def solve():
     log("right {} {}".format(right_edge, check_line))
     # 左を取得
     left = -(10**9 + 1)
-    right = 0
+    right = x
     while right - left > 1:
         mid = left + (right - left) // 2
         throw = "{} {}".format(mid, check_line)
@@ -77,7 +78,7 @@ def solve():
     log("center {}".format(center_line))
     check_line = center_line
     # 上を取得
-    left = 0
+    left = y
     right = 10**9 + 1
     while right - left > 1:
         mid = left + (right - left) // 2
@@ -97,7 +98,7 @@ def solve():
     log("top {} {}".format(top_edge, check_line))
     # 下を取得
     left = -(10**9 + 1)
-    right = 0
+    right = y
     while right - left > 1:
         mid = left + (right - left) // 2
         throw = "{} {}".format(check_line, mid)
@@ -123,8 +124,7 @@ def solve():
     elif out == WRONG:
         exit(0)
     elif out == HIT:
-        # if exit(1) get RE. exit(0) get WA...
-        exit(0)
+        exit(1)
     elif out == MISS:
         exit(1)
 
