@@ -12,8 +12,30 @@ def output(v):
     print(v, flush=True)
 
 
+def get_hit_point():
+    for x in [10**9 // 2, -(10**9 // 2), 0]:
+        for y in [10**9 // 2, -(10**9 // 2), 0]:
+            throw = "{} {}".format(x, y)
+            output(throw)
+            out = input().strip()
+            if out == CENTER:
+                return None
+            elif out == WRONG:
+                exit(1)
+            elif out == HIT:
+                return (x, y)
+            elif out == MISS:
+                continue
+
+
 def solve():
     check_line = 0
+    point = get_hit_point()
+    if point == None:
+        # center
+        return
+    else:
+        _, check_line = point
     # 右を取得
     left = 0
     right = 10**9 + 1
