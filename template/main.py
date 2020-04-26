@@ -1,6 +1,5 @@
 import sys
 input = sys.stdin.readline
 
-
-def log(v):
-    print(v, file=sys.stderr)
+def log(*args):
+    print(*args, file=sys.stderr)k
