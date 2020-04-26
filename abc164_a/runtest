@@ -3,4 +3,6 @@
 cd "$(dirname "$0")" || exi
 source ../runtest_func.sh
 
-t "" ""
+t "4 5" unsafe
+t "100 2" safe
+t "10 10" unsafe
