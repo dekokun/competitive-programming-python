@@ -9,8 +9,7 @@ def log(*args):
 
 N = int(input())
 l = []
-for _ in range(0, N):
-    l.append(int(input()))
+l = [int(input()) for _ in range(N)]
 ans = []
 
 
