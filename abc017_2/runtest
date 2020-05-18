@@ -3,4 +3,7 @@
 cd "$(dirname "$0")" || exi
 source ../runtest_func.sh
 
-t "" ""
+t "chokuou" YES
+t "kuccho" NO
+t "atcoder" NO
+t "" YES
