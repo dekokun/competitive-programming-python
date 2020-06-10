@@ -9,17 +9,11 @@ def log(*args):
 
 def main():
     n, m = map(int, input().split())
-    l = [list(map(int, input().split())) for _ in range(n)]
+    l = [tuple(map(int, input().split())) for _ in range(n)]
     ans = 0
-    for i in [-1, 1]:
-        for j in [-1, 1]:
-            for k in [-1, 1]:
-                l2 = []
-                for (x, y, z) in l:
-                    s = x * i + y * j + z * k
-                    l2.append(s)
-                l2 = sorted(l2, reverse=True)
-                ans = max(ans, sum(l2[:m]))
+    for i, j, k in product([-1, 1], repeat=3):
+        l2 = sorted([x * i + y * j + z * k for x, y, z in l], reverse=True)
+        ans = max(ans, sum(l2[:m]))
     print(ans)
 
 
