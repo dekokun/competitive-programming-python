@@ -15,3 +15,5 @@ t "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvxyz
 abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz" YES
 t "abcdef
 ghijkl" NO
+t "abcdee
+badcee" YES

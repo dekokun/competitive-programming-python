@@ -14,8 +14,15 @@ def main():
     z = zip(A, B)
     before = []
     after = []
+    pair = []
+    d = set({})
     for (a, b) in z:
         if a == b:
+            if a not in d:
+                d.add(a)
+            elif len(pair) == 0:
+                pair.append(a)
+                pair.append(a)
             continue
         before.append(a)
         after.append(b)
@@ -30,7 +37,8 @@ def main():
             print("YES")
             return
 
-    # beforeが1個だけのときどうなる？j
+    before += pair
+    after += pair
     for a in product(combinations(range(len(before)), 2), repeat=3):
         tmp = before.copy()
         for v in a:
