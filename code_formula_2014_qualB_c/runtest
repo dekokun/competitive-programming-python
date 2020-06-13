@@ -1,0 +1,19 @@
+#!/bin/bash
+
+cd "$(dirname "$0")" || exi
+source ../runtest_func.sh
+
+t "abcdef
+fedcba" YES
+t "abababab
+babababa" NO
+t "nt
+nt" NO
+t "pqqq
+pqqq" YES
+t "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvxyzw
+abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz" YES
+t "abcdef
+ghijkl" NO
+t "abcdee
+badcee" YES
