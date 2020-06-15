@@ -36,7 +36,7 @@ def main():
             for dist in range(1, k + 1):
                 new_x = x + add_x * dist
                 new_y = y + add_y * dist
-                if new_x >= h or new_x < 0 or new_y >= w or new_y < 0 or m[new_x][new_y] == '@':
+                if new_x >= h or new_x < 0 or new_y >= w or new_y < 0 or m[new_x][new_y] == '@' or ((not costs1[new_x][new_y] is None) and costs1[new_x][new_y] < cost + 1):
                     break
                 if costs1[new_x][new_y] is None:
                     costs1[new_x][new_y] = cost + 1
@@ -49,7 +49,7 @@ def main():
             for dist in range(1, k + 1):
                 new_x = x + add_x * dist
                 new_y = y + add_y * dist
-                if new_x >= h or new_x < 0 or new_y >= w or new_y < 0 or m[new_x][new_y] == '@':
+                if new_x >= h or new_x < 0 or new_y >= w or new_y < 0 or m[new_x][new_y] == '@' or ((not costs2[new_x][new_y] is None) and costs2[new_x][new_y] < cost + 1):
                     break
                 if costs2[new_x][new_y] is None:
                     costs2[new_x][new_y] = cost + 1
