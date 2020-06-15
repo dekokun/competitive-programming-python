@@ -3,4 +3,11 @@
 cd "$(dirname "$0")" || exi
 source ../runtest_func.sh
 
-t "" ""
+t "atcoder
+3" c
+t "beginner
+1" b
+t "contest
+7" t
+t "z
+1" z
