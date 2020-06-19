@@ -8,15 +8,29 @@ def log(*args):
 
 def main():
     n = int(input())
-    l = []
+    ss = []
     for _ in range(n):
-        l.append(sorted(input().strip()))
-    for c in range(ord('a'), ord('z') + 1):
-        log(chr(c))
-        # それぞれのリストにどの数がなんぼあるかを数える
-    for c in range(ord('a'), ord('z') + 1):
-        # それぞれの文字が最低何文字あるかを数える
-        # 連結する
+        ss.append(sorted(input().strip()))
+    mapList = [dict() for _ in range(n)]
+    for i in range(ord('a'), ord('z') + 1):
+        c = chr(i)
+        for j in range(len(ss)):
+            s = ss[j]
+            mapList[j][c] = 0
+            for ch in s:
+                if ch == c:
+                    mapList[j][c] += 1
+                else:
+                    break
+            ss[j] = ss[j][mapList[j][c]:]
+    ans = ''
+    for i in range(ord('a'), ord('z') + 1):
+        c = chr(i)
+        count = 100
+        for map in mapList:
+            count = min(count, map[c])
+        ans += c * count
+    print(ans)
 
 
 if __name__ == '__main__':
