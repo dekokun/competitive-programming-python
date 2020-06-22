@@ -1,5 +1,6 @@
 import sys
 from itertools import combinations
+from collections import Counter
 input = sys.stdin.readline
 
 
@@ -9,14 +10,11 @@ def log(*args):
 
 def main():
     n = int(input().rstrip())
-    m = {'M': 0, 'A': 0, 'R': 0, 'C': 0, 'H': 0}
-    for _ in range(n):
-        s = input().rstrip()
-        if s[0] in m:
-            m[s[0]] += 1
+    s = [input()[0] for _ in range(n)]
+    c = Counter(s)
     ans = 0
-    for c in combinations(m, 3):
-        ans += m[c[0]] * m[c[1]] * m[c[2]]
+    for x, y, z in combinations('MARCH', 3):
+        ans += c[x] * c[y] * c[z]
     print(ans)
 
 
