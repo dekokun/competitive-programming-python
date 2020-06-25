@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cd "$(dirname "$0")" || exi
+source ../runtest_func.sh
+
+t 2 b
+t 27 aa
+t 123456789 jjddja
+t 1000000000000001 ?????
+t 26 z
+t 702 zz
+t 18277 zzy
+t 475256 aaaab
