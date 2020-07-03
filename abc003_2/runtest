@@ -3,4 +3,9 @@
 cd "$(dirname "$0")" || exi
 source ../runtest_func.sh
 
-t "" ""
+t "ch@ku@ai
+choku@@i" "You can win"
+t "aoki
+@ok@" "You will lose"
+t "arc
+abc" "You will lose"
