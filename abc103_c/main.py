@@ -9,6 +9,9 @@ def log(*args):
 
 def main():
     np.set_printoptions(threshold=20)
+    N = int(input())
+    a = list(map(int, input().rstrip().split()))
+    print(sum(a) - N)
 
 
 if __name__ == '__main__':
