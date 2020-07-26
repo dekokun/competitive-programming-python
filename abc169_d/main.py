@@ -17,9 +17,10 @@ def main():
         while N % i == 0:
             d[i] += 1
             N //= i
-    if not N == 1:
+    if N != 1:
         d[N] += 1
 
+    log(d)
     ans = 0
     for key in d:
         val = d[key]
@@ -28,7 +29,10 @@ def main():
         for i in range(1, val):
             tmp += i
             count += 1
-            if tmp >= val:
+            if tmp == val:
+                break
+            elif tmp > val:
+                count -= 1
                 break
         ans += max(count, 1)
     print(ans)
