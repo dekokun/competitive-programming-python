@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd "$(dirname "$0")" || exi
+source ../runtest_func.sh
+
+t "24" 3
+t 1 0
+t 64 3
+t 1000000007 1
+t 997764507000 7
+t 1000000000000 8

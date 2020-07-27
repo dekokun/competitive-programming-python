@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd "$(dirname "$0")" || exi
+source ../runtest_func.sh
+
+t "725" 7
+t "1600" 2
