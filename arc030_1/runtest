@@ -3,4 +3,11 @@
 cd "$(dirname "$0")" || exi
 source ../runtest_func.sh
 
-t "" ""
+t "6
+2" "YES"
+t "3
+2" NO
+t "11
+6" NO
+t "11
+5" YES
